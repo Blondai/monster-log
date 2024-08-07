@@ -1,0 +1,7 @@
+# Folder
+.git/
+.venv/
+.idea/
+
+# Test files
+test.py
