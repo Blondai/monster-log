@@ -11,3 +11,5 @@ file and could be expanded to calculate kills per hour and profit per hour.
 - Alternatively just look for the colors inside the healthbar
 - Make a log class
 - Make a monster class
+- Add docstrings to Duration class
+- Add check function to test if values are valid for Duration class
