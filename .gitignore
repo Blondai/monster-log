@@ -2,6 +2,7 @@
 .git/
 .venv/
 .idea/
+.old/
 
 # Test files
 test.py
