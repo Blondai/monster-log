@@ -32,3 +32,15 @@ class Rectangle:
         corner2: tuple[int, int] = Rectangle.get_corner()
         pair: tuple[tuple[int, int], tuple[int, int]] = (corner1, corner2)
         return pair
+
+    def __str__(self) -> str:
+        string: str = ('( ('
+                       + str(self.x_min)
+                       + ', '
+                       + str(self.y_min)
+                       + '), ('
+                       + str(self.x_max)
+                       + ', '
+                       + str(self.y_max)
+                       + ') )')
+        return string
