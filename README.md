@@ -26,13 +26,22 @@ Using the text method we got
 
 which is exactly what we wanted.
 
+Furthermore we now have a somewhat working prototype.
+I am very sorry to all those poor Outlaws that suffered in testing this code.
+
+<p align="center">
+  <img src="./examples/Prototype.png" width="400px">
+</p>
+
+This works only with multiple bodges and will get a big rework in the future.
+
 
 
 ## Todos
 
 - [X] Get screenshots from specific part of the screen
 - [X] Filter screenshot to only white (increases readability?)
-- [ ] Analyze for enemy name (?) and health left (?) with ~~easyocr~~ pytesseract
+- [X] Analyze for enemy name (?) and health left (?) with ~~easyocr~~ pytesseract
 - [ ] ~~Alternatively just look for the colors inside the healthbar~~
 - [ ] Make a log class
 - [ ] Make a monster class
@@ -40,5 +49,6 @@ which is exactly what we wanted.
 - [ ] Add docstrings to Duration class
 - [ ] Add check function to test if values are valid for Duration class
 - [ ] Add text analyse for text from screenshot
+- [X] Add framework for a list of all monsters
 - [ ] Add list of all (?) monsters to go through and get health
 - [ ] Add extra analyse for hits to enemy and hits to yourself?
