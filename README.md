@@ -7,7 +7,8 @@ file and could be expanded to calculate kills per hour and profit per hour.
 **TODO:**
 
 - Get screenshots from specific part of the screen
-- Analyze for enemy name (?) and health left (?)
+- Filter screenshot to only white (increases readability?)
+- Analyze for enemy name (?) and health left (?) with easyocr
 - Alternatively just look for the colors inside the healthbar
 - Make a log class
 - Make a monster class

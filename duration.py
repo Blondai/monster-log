@@ -1,9 +1,8 @@
-
 class Duration:
-    def __int__(self,
-                hours: int,
-                minutes: int,
-                seconds: float) -> None:
+    def __init__(self,
+                 hours: int,
+                 minutes: int,
+                 seconds: float) -> None:
         self.hours: int = hours
         self.minutes: int = minutes
         self.seconds: float = seconds
@@ -12,30 +11,36 @@ class Duration:
         dictionary: dict[str, int | float] = self.__dict__
         return str(dictionary)
 
+    def __add__(self, other: 'Duration') -> 'Duration':
+        combined_seconds: float = self.to_seconds() + other.to_seconds()
+        new_duration: Duration = Duration.from_seconds(combined_seconds)
+        return new_duration
+
     @staticmethod
-    def from_seconds(seconds: float) -> tuple[int, int, float]:
+    def from_seconds(seconds: float) -> 'Duration':
         new_hours: int = int(seconds) // 3600
         new_minutes: int = (int(seconds) % 3600) // 60
         new_seconds: float = seconds % 60
-        return new_hours, new_minutes, new_seconds
+        duration: Duration = Duration(new_hours, new_minutes, new_seconds)
+        return duration
 
     @staticmethod
-    def from_ticks(ticks: float) -> tuple[int, int, float]:
+    def from_ticks(ticks: float) -> 'Duration':
         seconds: float = ticks * 0.6
-        new_hours, new_minutes, new_seconds = Duration.from_seconds(seconds)
-        return new_hours, new_minutes, new_seconds
+        duration: Duration = Duration.from_seconds(seconds)
+        return duration
 
     @staticmethod
-    def from_minutes(minutes: float) -> tuple[int, int, float]:
+    def from_minutes(minutes: float) -> 'Duration':
         seconds: float = minutes * 60
-        new_hours, new_minutes, new_seconds = Duration.from_seconds(seconds)
-        return new_hours, new_minutes, new_seconds
+        duration: Duration = Duration.from_seconds(seconds)
+        return duration
 
     @staticmethod
-    def from_hours(hours: float) -> tuple[int, int, float]:
+    def from_hours(hours: float) -> 'Duration':
         seconds: float = hours * 3600
-        new_hours, new_minutes, new_seconds = Duration.from_seconds(seconds)
-        return new_hours, new_minutes, new_seconds
+        duration: Duration = Duration.from_seconds(seconds)
+        return duration
 
     def to_seconds(self) -> float:
         time_in_seconds: float = 0
